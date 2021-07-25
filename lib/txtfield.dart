@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 class TxtField extends StatelessWidget {
   IconData icon1;
-  bool ?scure;
+  bool scure;
   String ?text;
   TxtField({
     this.text,
 
     this.icon1 =Icons.hourglass_empty,
 
-    this.scure,
+    this.scure=false,
   });
 
   @override
@@ -17,7 +17,7 @@ class TxtField extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: TextField(style: TextStyle(color: Colors.black,),
 
-        obscureText: true,
+        obscureText: scure,
         obscuringCharacter: '*',
         decoration: InputDecoration(
           prefixIcon: Icon(
