@@ -13,18 +13,40 @@ class LoginButon extends StatelessWidget {
         ),
       ),
       actions: <Widget>[
-        TextButton(
-          child: const Text('ok'),
-          onPressed: () {
-            final snackBar = SnackBar(
-              content: const Text('your successfully login'),
 
-            );
-            ScaffoldMessenger.of(context).showSnackBar(snackBar);
-          },
+        InkWell(
+          child:TextButton(
+            onPressed: (){
+              Navigator.of(context).pop();
+              final bar =SnackBar(
+                content: Expanded(
+                  child: Text ('Your Successfully Login'),
+                ),
+                action: SnackBarAction(
+                  label: 'OK',
+                  onPressed: (){},
+                ),
+              );
+              ScaffoldMessenger.of(context).showSnackBar(bar);
+            },
+            child: Text('OK',
+              style: TextStyle(color: Colors.deepOrange,
+                  fontWeight: FontWeight.bold,fontSize: 20),),
+          ),
         ),
+        // TextButton(
+        //   child: const Text('ok'),
+        //   onPressed: () {
+        //     final snackBar = SnackBar(
+        //       content: const Text('your successfully login'),
+        //
+        //     );
+        //     ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        //   },
+        // ),
         TextButton(
-          child: const Text('cancel'),
+          child: const Text('cancel',style: TextStyle(color: Colors.deepOrange,
+              fontWeight: FontWeight.bold,fontSize: 20),),
           onPressed: () {
             Navigator.of(context).pop();
           },
