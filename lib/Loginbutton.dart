@@ -16,7 +16,11 @@ class LoginButon extends StatelessWidget {
         TextButton(
           child: const Text('ok'),
           onPressed: () {
-            Navigator.of(context).pop();
+            final snackBar = SnackBar(
+              content: const Text('your successfully login'),
+
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
           },
         ),
         TextButton(

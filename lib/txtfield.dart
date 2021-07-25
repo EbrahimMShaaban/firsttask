@@ -16,7 +16,7 @@ class TxtField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10),
       child: TextField(style: TextStyle(color: Colors.black,),
-       
+
         obscureText: true,
         obscuringCharacter: '*',
         decoration: InputDecoration(
