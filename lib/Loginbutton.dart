@@ -1,9 +1,20 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class LoginButon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      title: const Text('Login'),
+    return AlertDialog(shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(30)),
+      title:Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Text('text'),
+        SizedBox(width: 70
+          ,),
+        Icon(Icons.account_circle)
+
+        ],),
+     // Center(child: const Text('Login')),
       content: SingleChildScrollView(
         child: ListBody(
           children: const <Widget>[
